@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{front/layouts/main}">
+
+<main layout:fragment="content" th:object="${boardData}">
+    <form method="get" th:action="@{/board/write}">
+        <button type="submit" th:text="#{게시글_작성하기}"></button>
+    </form>
+    <!--    <form method="get" th:action="@{/board/save}" th:object="${requestBoard}">-->
+    <table th:object="${requestBoard}">
+        <thead>
+        <tr>
+            <th th:text="#{순번}"></th>
+            <th th:text="#{제목}"></th>
+            <th th:text="#{작성자}"></th>
+            <th th:text="#{작성일}"></th>
+            <th th:text="#{작업}"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="item,s :${items}" th:object="${item}" class="item" th:id="boardData+${s.index}">
+            <td>[[${s.index+1}]]</td>
+            <td>
+                <a th:href="@{/board/view/{seq}(seq=${item.id})}" th:text="${item.title}"></a>
+            </td>
+            <td th:text="*{author}"></td>
+            <td th:text="*{#temporals.format(createdAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
+            <td>
+                <form th:action="@{/board/update/{id}(id=${item.id})}" method="get">
+                    <button type="submit" th:text="#{수정하기}"></button>
+                </form>
+                <form th:action="@{/board/delete/{id}(id=${item.id})}" method="post">
+                    <button type="submit" th:text="#{삭제하기}"></button>
+                </form>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+    <!--    </form>-->
+
+
+</main>
+
+</html>

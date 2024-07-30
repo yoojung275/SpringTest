@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{front/layouts/main}">
+
+<main layout:fragment="content">
+    <form method="post" th:action="@{/board/save}" th:object="${requestBoard}" autocomplete="off">
+        <th:block th:replace="~{front/board/_form::form}"></th:block>
+        <div class="submit_btns">
+            <button type="reset" th:text="#{다시입력}"></button>
+            <button type="submit" th:text="#{작성하기}"></button>
+        </div>
+    </form>
+</main>
+
+<!--
+<head>
+    <title th:text="#{게시글_작성}"></title>
+    <link rel="stylesheet" href="/css/board/write.css">
+</head>
+<body>
+<div class="layout_width">
+
+    <form name="frmWrite" method="post" th:action="@{/board/write}" autocomplete="off">
+        <input type="hidden" name="mode" value="write">
+        <div class="form-group">
+            <label for="author" th:text="#{작성자}"></label>
+            <input type="text" id="author" name="author" class="input-field">
+            <div class="error" th:text="#{작성자를_입력하세요.}"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="title" th:text="#{제목}"></label>
+            <input type="text" id="title" name="title" class="input-field">
+            <div class="error" th:text="#{제목을_입력하세요.}"></div>
+        </div>
+        <div class="form-group">
+            <label for="content" th:text="#{내용}"></label>
+            <textarea id="content" name="content" class="text-area"></textarea>
+            <div class="error" th:text="#{내용을_입력하세요.}"></div>
+        </div>
+
+        <div class="submit_btns">
+            <button type="reset" th:text="#{다시입력}"></button>
+            <button type="submit" th:text="#{작성하기}"></button>
+        </div>
+    </form>
+</div>
+</body>
+-->
+</html>

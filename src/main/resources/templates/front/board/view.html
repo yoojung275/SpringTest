@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{front/layouts/main}">
+
+<main layout:fragment="content" th:object="${boardData}">
+    <dl>
+        <dt>작성자</dt>
+        <dd th:text="*{author}"></dd>
+    </dl>
+    <dl>
+        <dt>제목</dt>
+        <dd th:text="*{title}"></dd>
+    </dl>
+    <dl>
+        <dt>내용</dt>
+        <dd th:text="*{content}"></dd>
+    </dl>
+    <form method="get" th:action="@{/board/list}">
+        <button type="submit" th:text="#{목록으로_돌아가기}"></button>
+    </form>
+</main>
+</html>
