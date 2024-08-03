@@ -1,10 +1,10 @@
-package org.choongang.SpringTest.global.board.services;
+package org.choongang.SpringTest.board.services;
 
 import lombok.RequiredArgsConstructor;
-import org.choongang.SpringTest.global.board.controllers.RequestBoard;
-import org.choongang.SpringTest.global.board.entities.BoardData;
-import org.choongang.SpringTest.global.board.exceptions.BoardNotFoundException;
-import org.choongang.SpringTest.global.board.repositories.BoardDataRepository;
+import org.choongang.SpringTest.board.controllers.RequestBoard;
+import org.choongang.SpringTest.board.entities.BoardData;
+import org.choongang.SpringTest.board.exceptions.BoardNotFoundException;
+import org.choongang.SpringTest.board.repositories.BoardDataRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 

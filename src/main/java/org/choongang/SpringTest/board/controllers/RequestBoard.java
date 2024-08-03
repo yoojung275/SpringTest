@@ -1,6 +1,5 @@
-package org.choongang.SpringTest.global.board.controllers;
+package org.choongang.SpringTest.board.controllers;
 
-import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,7 +10,6 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor @AllArgsConstructor
 public class RequestBoard {
-    @Id
     private Long id;
     @NotBlank
     private String author;

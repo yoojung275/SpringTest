@@ -1,11 +1,11 @@
-package org.choongang.SpringTest.global.board.controllers;
+package org.choongang.SpringTest.board.controllers;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.choongang.SpringTest.global.board.entities.BoardData;
-import org.choongang.SpringTest.global.board.repositories.BoardDataRepository;
-import org.choongang.SpringTest.global.board.services.BoardReadService;
-import org.choongang.SpringTest.global.board.services.BoardSaveService;
+import org.choongang.SpringTest.board.entities.BoardData;
+import org.choongang.SpringTest.board.repositories.BoardDataRepository;
+import org.choongang.SpringTest.board.services.BoardReadService;
+import org.choongang.SpringTest.board.services.BoardSaveService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;

@@ -1,4 +1,4 @@
-package org.choongang.SpringTest.global.board.exceptions;
+package org.choongang.SpringTest.board.exceptions;
 
 public class BoardNotFoundException extends RuntimeException {
     public BoardNotFoundException() {

@@ -1,6 +1,6 @@
-package org.choongang.SpringTest.global.board.repositories;
+package org.choongang.SpringTest.board.repositories;
 
-import org.choongang.SpringTest.global.board.entities.BoardData;
+import org.choongang.SpringTest.board.entities.BoardData;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 

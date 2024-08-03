@@ -1,4 +1,4 @@
-package org.choongang.SpringTest.global.board.entities;
+package org.choongang.SpringTest.board.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

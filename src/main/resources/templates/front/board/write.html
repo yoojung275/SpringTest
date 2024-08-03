@@ -6,6 +6,7 @@
 <main layout:fragment="content">
     <form method="post" th:action="@{/board/save}" th:object="${requestBoard}" autocomplete="off">
         <th:block th:replace="~{front/board/_form::form}"></th:block>
+        <!-- _form::form == _form의 th:fragment="form" 부분과 연동한다는 소리-->
         <div class="submit_btns">
             <button type="reset" th:text="#{다시입력}"></button>
             <button type="submit" th:text="#{작성하기}"></button>
